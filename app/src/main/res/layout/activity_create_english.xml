@@ -9,14 +9,94 @@
     android:background="#FFFFFF"
     android:orientation="vertical">
 
-    <include
-        layout="@layout/toolbar2"/>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Them moi tu vung"
+        android:text="Add new Vocabulary"
+        android:layout_marginTop="20dp"
         android:textAlignment="center"
         android:textSize="25dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Vocabulary name"
+        android:textSize="15dp"
+        android:layout_margin="20dp"
+        android:textColor="#000000"
+        android:id="@+id/edt_vo_name"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:textSize="15dp"
+        android:layout_margin="20dp"
+        android:textColor="#000000"
+        android:id="@+id/edt_vo_desc"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Type"
+                android:textSize="15dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_margin="20dp"
+                android:id="@+id/spin_vo_type" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:textAlignment="center"
+            android:backgroundTint="#64B5F6"
+            android:id="@+id/btn_add_new_vo"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textAlignment="center"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#64B5F6"
+            android:id="@+id/btn_back_vo"/>
+
+    </LinearLayout>
 
 </LinearLayout>

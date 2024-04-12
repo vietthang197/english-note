@@ -1,5 +1,6 @@
 package com.example.englishnote.model;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -38,5 +39,11 @@ public class VocabularyType {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return name;
     }
 }

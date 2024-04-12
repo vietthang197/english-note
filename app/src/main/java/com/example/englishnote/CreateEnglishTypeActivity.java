@@ -48,18 +48,13 @@ public class CreateEnglishTypeActivity extends AppCompatActivity {
             vocabularyType.setName(name);
             vocabularyType.setDesc(desc);
 
-            this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    final AppDatabase appDatabase = Room.databaseBuilder(getApplicationContext(),
-                            AppDatabase.class, "vocabulary-database").allowMainThreadQueries().build();
-                    appDatabase.vocabularyTypeDao().insert(vocabularyType);
-
-                    Toast.makeText(getApplicationContext(), "Add Successfully", Toast.LENGTH_LONG).show();
-                    edtVolType.setText(null);
-                    edtVolTypeDesc.setText(null);
-                }
-            });
+            AppDatabase appDatabase = Room.databaseBuilder(getApplicationContext(),
+                    AppDatabase.class, "vocabulary-database").allowMainThreadQueries().build();
+            appDatabase.vocabularyTypeDao().insert(vocabularyType);
+            Toast.makeText(getApplicationContext(), "Add Successfully", Toast.LENGTH_LONG).show();
+            edtVolType.setText(null);
+            edtVolTypeDesc.setText(null);
+            appDatabase.close();
 
 
         });
