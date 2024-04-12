@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_create_english_type"
+    android:visibility="visible"
+    tools:visibility="visible"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add new Vocabulary Type"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Adv, verbs, ...."
+        android:textSize="15dp"
+        android:layout_margin="20dp"
+        android:textColor="#000000"
+        android:id="@+id/edt_vo_type"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description..."
+        android:textSize="15dp"
+        android:layout_margin="20dp"
+        android:textColor="#000000"
+        android:id="@+id/edt_vo_type_description"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:textAlignment="center"
+            android:backgroundTint="#64B5F6"
+            android:id="@+id/btn_add_new_vo_type"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textAlignment="center"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#64B5F6"
+            android:id="@+id/btn_back_vo_type"/>
+
+    </LinearLayout>
+
+</LinearLayout>
